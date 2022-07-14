@@ -1038,3 +1038,8 @@ body.bdpopup-open {
   padding: 0 4px;
   outline: none;
 }
+.sticky-head {
+  position: sticky;
+  top: 0px;
+  z-index: 1;
+}

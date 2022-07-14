@@ -11,7 +11,7 @@ const CustomEditableTable = ({ data }) => {
       <FixedList
         height={520}
         thead={
-          <div>
+          <div className="sticky-head">
             <div className="d-flex p-0 bg-white">
               {headers.map((item, idx) => {
                 return (
