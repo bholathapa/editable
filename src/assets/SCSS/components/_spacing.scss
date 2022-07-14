@@ -1,0 +1,39 @@
+$spacing: 10;
+@while $spacing < 100 {
+    .p-#{$spacing} {
+        padding: $spacing + px !important;
+    }
+    .pt-#{$spacing},
+    .py-#{$spacing} {
+        padding-top: $spacing + px !important;
+    }
+    .pb-#{$spacing},
+    .py-#{$spacing} {
+        padding-bottom: $spacing + px !important;
+    }
+    .pl-#{$spacing},
+    .px-#{$spacing} {
+        padding-left: $spacing + px !important;
+    }
+    .pr-#{$spacing},
+    .px-#{$spacing} {
+        padding-right: $spacing + px !important;
+    }
+    .mt-#{$spacing},
+    .my-#{$spacing} {
+        margin-top: $spacing + px !important;
+    }
+    .mb-#{$spacing},
+    .my-#{$spacing} {
+        margin-bottom: $spacing + px !important;
+    }
+    .ml-#{$spacing},
+    .mx-#{$spacing} {
+        margin-left: $spacing + px !important;
+    }
+    .mr-#{$spacing},
+    .mx-#{$spacing} {
+        margin-right: $spacing + px !important;
+    }
+    $spacing: $spacing + 5;
+}

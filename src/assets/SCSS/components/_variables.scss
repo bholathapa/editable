@@ -1,0 +1,215 @@
+:root {
+  //Primary Color Shades & Tints
+  --color-primary-50: hsl(221, 90%, 96%);
+  --color-primary-50-h: 221;
+  --color-primary-50-s: 90%;
+  --color-primary-50-l: 96%;
+
+  --color-primary-100: hsl(219, 91%, 87%);
+  --color-primary-100-h: 219;
+  --color-primary-100-s: 91%;
+  --color-primary-100-l: 87%;
+
+  --color-primary-200: hsl(220, 92%, 79%);
+  --color-primary-200-h: 220;
+  --color-primary-200-s: 492%;
+  --color-primary-200-l: 79%;
+
+  --color-primary-300: hsl(220, 92%, 71%);
+  --color-primary-300-h: 220;
+  --color-primary-300-s: 92%;
+  --color-primary-300-l: 71%;
+
+  --color-primary-400: hsl(219, 92%, 63%);
+  --color-primary-400-h: 219;
+  --color-primary-400-s: 92%;
+  --color-primary-400-l: 63%;
+
+  //500 Base is the Main Primary Color
+  --color-primary-500: hsl(218, 91%, 59%);
+  --color-primary-500-h: 218;
+  --color-primary-500-s: 91%;
+  --color-primary-500-l: 59%;
+
+  --color-primary-600: hsl(220, 72%, 53%);
+  --color-primary-600-h: 220;
+  --color-primary-600-s: 72%;
+  --color-primary-600-l: 53%;
+
+  --color-primary-700: hsl(219, 65%, 41%);
+  --color-primary-700-h: 219;
+  --color-primary-700-s: 65%;
+  --color-primary-700-l: 41%;
+
+  --color-primary-800: hsl(219, 65%, 35%);
+  --color-primary-800-h: 219;
+  --color-primary-800-s: 65%;
+  --color-primary-800-l: 35%;
+
+  --color-primary-900: hsl(220, 65%, 23%);
+  --color-primary-900-h: 220;
+  --color-primary-900-s: 65%;
+  --color-primary-900-l: 23%;
+
+  //Global Changeable Variables
+  --color-navbrand-background: hsl(219, 65%, 41%);
+  --color-sidebarmenulink-normal: hsl(0, 0%, 100%);
+  --color-sidebaricon-normal: hsl(219, 91%, 87%);
+}
+
+@function customLighten($color-variable, $value) {
+  $color-variable-h: var(#{$color-variable + "-h"});
+  $color-variable-s: var(#{$color-variable + "-s"});
+  $color-variable-l: calc(var(#{$color-variable + "-l"}) - #{$value+"%"});
+  @return hsl($color-variable-h, $color-variable-s, $color-variable-l);
+}
+//Button
+$buttonText: var(--color-sidebarmenulink-normal);
+
+//Base Colors
+$white: #ffffff;
+$gray-25: #f8f9fd;
+$gray-50: #f1f4f8;
+$gray-100: #dbe2eb;
+$gray-200: #bfccda;
+$gray-300: #a3b3c6;
+$gray-400: #879aaf;
+$gray-500: #687d96;
+$gray-600: #4e657f;
+$gray-700: #394e66;
+$gray-800: #293b51;
+$gray-900: #172a41;
+$black: #333333;
+
+//Default Brand HEX COLORS
+$defaultBrand-50: #ebf1fe;
+$defaultBrand-100: #c2d6fc;
+$defaultBrand-200: #9abbfb;
+$defaultBrand-300: #719ff9;
+$defaultBrand-400: #4884f7;
+$defaultBrand-500: #367bf6;
+$defaultBrand-600: #2f6add;
+$defaultBrand-700: #2453ac;
+$defaultBrand-800: #1f4794;
+$defaultBrand-900: #152f62;
+
+//Brand colors for light versions
+$brand-50: var(--color-primary-50);
+$brand-100: var(--color-primary-100);
+$brand-200: var(--color-primary-200);
+$brand-300: var(--color-primary-300);
+$brand-400: var(--color-primary-400);
+$brand-500: var(--color-primary-500);
+$brand-600: var(--color-primary-600);
+$brand-700: var(--color-primary-700);
+$brand-800: var(--color-primary-800);
+$brand-900: var(--color-primary-900);
+
+//Accent colors - for Light versions
+$accent-50: #f0f9f0;
+$accent-100: #d1edd1;
+$accent-200: #b2e2b3;
+$accent-300: #93d694;
+$accent-400: #74ca75;
+$accent-500: #65c466;
+$accent-600: #5bb05c;
+$accent-700: #478947;
+$accent-800: #3d763d;
+$accent-900: #284e29;
+
+//Error Colors
+$error-50: #fcecee;
+$error-100: #f7cfd3;
+$error-200: #e39e9c;
+$error-300: #d67976;
+$error-400: #dd5e56;
+$error-500: #eb4e3d;
+$error-600: #d3483e;
+$error-700: #c23f38;
+$error-800: #b63831;
+$error-900: #a82e26;
+
+//Warning Colors
+$warning-50: #fdf3e2;
+$warning-100: #fae0b7;
+$warning-200: #f7cd8b;
+$warning-300: #f4b961;
+$warning-400: #f2aa47;
+$warning-500: #f19c38;
+$warning-600: #ec9135;
+$warning-700: #e58231;
+$warning-800: #df732c;
+$warning-900: #d55a26;
+
+//Success Colors
+$success-50: #e7f8e7;
+$success-100: #cbf0ca;
+$success-200: #a4e39e;
+$success-300: #73c766;
+$success-400: #5baf4a;
+$success-500: #479534;
+$success-600: #3d832a;
+$success-700: #367628;
+$success-800: #295e1d;
+$success-900: #1c4613;
+
+// Purple Colors
+$purple-50: #e1d6f3;
+
+//Other
+$inputFocus: var(--color-primary-500);
+$bacgroundColor: $gray-50;
+
+//Shadow
+$shadow-1: 0px 1px 3px rgba(20, 28, 52, 0.2);
+$shadow-2: 0px 4px 6px rgba(20, 28, 52, 0.2);
+$shadow-3: 0px 5px 15px rgba(20, 28, 52, 0.2);
+$shadow-4: 0px 10px 24px rgba(20, 28, 52, 0.2);
+$shadow-5: 0px 15px 35px rgba(20, 28, 52, 0.2);
+$shadow-subheader: 0px 2px 3px rgba(20, 28, 52, 0.2);
+$shadow-input-focus: 0px 0px 4px rgba(0, 101, 247, 0.25);
+
+//Bootstrap
+$primary: var(--color-primary-500);
+$green: #00aa58;
+$yellow: #f1993b;
+$orange: #e27131;
+$red: #f85c4a;
+$purple: #836fc2;
+$indigo: #3f5f8f;
+$cyan: #3d908b;
+$light: #dbe2eb;
+$dark: #404756;
+$secondary: $gray-500;
+$darkblue: #00246e;
+$textColor: #172a41;
+$darkGreen: #327823;
+
+//Full Badge Colors
+$badgeGreen: #16878c;
+$badgeDarkBlue: #1f5573;
+$badgePurple: #5c5ce0;
+$badgeDarkPurple: #864ccc;
+$badgePink: #d44da5;
+$badgeBlue: #367bf6;
+$badgeYellow: #e58617;
+$badgeBrown: #843037;
+$badgeLightBrown: #A48264;
+$badgeLightGreen: #ECF9E9;
+
+//Half Tone(Soft) Badge Colors
+$badgeSoftGreen: #d5eeee;
+$badgeSoftDarkBlue: #ccedff;
+$badgeSoftPurple: #efe5ff;
+$badgeSoftPink: #fff1fa;
+$badgeSoftBlue: #d7e5fd;
+$badgeSoftYellow: #fff8e6;
+$badgeSoftbrown: #fbefef;
+
+//Font Size
+$bodyFontSize: 12px;
+$lableFontSize: 12px;
+$bodyFontFamily: "Inter", sans-serif;
+
+//Buttons
+$buttonBorderRadius: 3px;

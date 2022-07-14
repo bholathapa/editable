@@ -1,0 +1,79 @@
+//Main SCSS
+
+#main-wrapper {
+    width: 100%;
+}
+
+.page-wrapper {
+    position: relative;
+    transition: 0.2s ease-in;
+    display: none;
+}
+
+.page-wrapper > .page-content {
+    padding: 0 30px 5px;
+    min-height: calc(100vh - 119px);
+}
+
+.footer {
+    padding: 15px 20px;
+    background: #fff;
+    color: #8898aa;
+}
+
+.left-part {
+    height: calc(100% - 81px);
+    width: 360px;
+    position: absolute;
+    border-right: 1px solid rgba(120, 130, 140, 0.13);
+}
+
+.left-part.fixed-left-part {
+    position: fixed;
+    top: 59px;
+    right: 10px;
+    border-radius: 0.25rem;
+    box-shadow: 0 12px 28px 0 rgba(0, 0, 0, 0.2), 0 2px 4px 0 rgba(0, 0, 0, 0.1),
+        inset 0 0 0 1px rgba(255, 255, 255, 0.5);
+    display: flex;
+    flex-direction: column;
+    z-index: 1000;
+}
+
+.left-part .show-left-part {
+    position: absolute;
+    top: 45%;
+    right: -41px;
+}
+
+.right-part {
+    width: calc(100% - 260px);
+}
+
+.reverse-mode .left-part {
+    right: 0;
+    border-left: 1px solid rgba(120, 130, 140, 0.13);
+}
+
+.reverse-mode .show-left-part {
+    right: auto;
+    left: -41px;
+}
+
+.reverse-mode .right-part {
+    margin-left: 0;
+    margin-right: 260px;
+}
+
+@media (min-width: 992px) {
+    #main-wrapper .page-wrapper {
+        margin-left: 70px;
+    }
+}
+
+#main-wrapper .page-wrapper {
+    top: 60px;
+    display: block;
+    height: calc(100vh - 60px);
+    overflow-y: auto;
+}

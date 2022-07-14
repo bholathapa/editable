@@ -1,0 +1,57 @@
+.fade {
+  transition: opacity 0.15s linear;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .fade {
+    transition: none;
+  }
+}
+
+.collapse:not(.show) {
+  display: none;
+}
+
+.collapsing {
+  position: relative;
+  height: 0;
+  overflow: hidden;
+  transition: height 0.35s ease;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .collapsing {
+    transition: none;
+  }
+}
+
+.originalDivPdf {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
+
+
+.image-box{
+    width:100%;
+    overflow:hidden;
+  }
+  .zoom {
+      
+    overflow:hidden;
+      width:100%;
+    height:100%;
+     -webkit-transition: all .5s ease;
+    -moz-transition: all .5s ease;
+    -ms-transition: all .5s ease;
+    -o-transition: all .5s ease;
+    transition: all .5s ease;
+  } 
+//   .zoom:hover { 
+//     cursor: pointer; 
+//     -webkit-transform: scale(2);
+//     -moz-transform: scale(2);
+//     -o-transform: scale(2);
+//     -ms-transform: scale(2); /* IE 9 */ 
+//     transform: scale(2);
+//   } 

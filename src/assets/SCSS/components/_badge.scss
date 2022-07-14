@@ -1,0 +1,454 @@
+.badge {
+  display: inline-block;
+  padding: 3px 5px;
+  font-size: 10px;
+  font-weight: 600;
+  line-height: 15px;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  border-radius: 3px;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  &:empty {
+    display: none;
+  }
+  svg {
+    height: 13px;
+  }
+}
+.badge-sm {
+  padding: 0px 2px;
+}
+
+.badge-sm.badge-rounded {
+  min-width: 15px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .badge {
+    transition: none;
+  }
+}
+
+a.badge:hover,
+a.badge:focus {
+  text-decoration: none;
+}
+a.badge:focus,
+a.badge.focus {
+  outline: 0;
+  box-shadow: $shadow-1;
+}
+
+.badge .btn .badge {
+  position: relative;
+  top: -1px;
+}
+
+.badge-pill {
+  border-radius: 22px;
+}
+
+.badge-primary,
+.badge-brand-500 {
+  color: $white;
+  background-color: $badgeBlue;
+}
+
+a.badge-primary:hover,
+a.badge-primary:focus,
+a.badge-brand-500:hover,
+a.badge-brand-500:focus {
+  background-color: darken($badgeBlue, 10%);
+}
+
+//Badge Brand
+.badge-brand-50 {
+  color: var(--color-primary-500);
+  background-color: var(--color-primary-50);
+}
+
+a.badge-brand-50:hover,
+a.badge-brand-50:focus {
+  background-color: var(--color-primary-400);
+}
+
+.badge-brand-100 {
+  color: var(--color-primary-500);
+  background-color: var(--color-primary-100);
+}
+
+a.badge-brand-50:hover,
+a.badge-brand-50:focus {
+  background-color: var(--color-primary-400);
+}
+
+.badge-brand-300 {
+  color: $white;
+  background-color: var(--color-primary-300);
+}
+
+a.badge-brand-300:hover,
+a.badge-brand-300:focus {
+  background-color: var(--color-primary-400);
+}
+.badge-outline-brand-300 {
+  color: var(--color-primary-300);
+  border: 1px solid var(--color-primary-300);
+}
+
+a.badge-outline-brand-300:hover,
+a.badge-outline-brand-300:focus {
+  background-color: var(--color-primary-100);
+}
+
+.badge-secondary {
+  color: $white;
+  background-color: $gray-500;
+}
+
+a.badge-secondary:hover,
+a.badge-secondary:focus {
+  background-color: $gray-600;
+}
+
+.badge-success {
+  color: $white;
+  background-color: $accent-500;
+}
+
+a.badge-success:hover,
+a.badge-success:focus {
+  background-color: darken($accent-500, 10%);
+}
+
+.badge-success-dark {
+  color: $success-900;
+  background-color: $success-50;
+
+  &:hover,
+  &:focus {
+    background-color: darken($success-50, 10%);
+  }
+}
+
+.badge-accent-100 {
+  color: $accent-900;
+  background-color: $accent-100;
+
+  &:hover,
+  &:focus {
+    background-color: darken($accent-100, 10%);
+  }
+}
+
+.badge-green {
+  color: $white;
+  background-color: $badgeGreen;
+}
+
+a.badge-green:hover,
+a.badge-green:focus {
+  background-color: darken($badgeGreen, 10%);
+}
+
+.badge-light-green {
+  background-color: $badgeLightGreen;
+  color: $darkGreen;
+
+  &:hover,
+  &:focus {
+    background-color: darken($badgeLightGreen, 10%);
+  }
+}
+
+.badge-info {
+  color: $white;
+  background-color: $badgeDarkBlue;
+}
+
+a.badge-info:hover,
+a.badge-info:focus {
+  background-color: darken($badgeDarkBlue, 10%);
+}
+
+.badge-warning {
+  color: $white;
+  background-color: $badgeYellow;
+}
+
+a.badge-warning:hover,
+a.badge-warning:focus {
+  background-color: darken($badgeYellow, 10%);
+}
+
+.badge-danger {
+  color: $white;
+  background-color: $error-500;
+}
+
+a.badge-danger:hover,
+a.badge-danger:focus {
+  background-color: darken($error-500, 10%);
+}
+
+.badge-danger-light {
+  color: $error-500;
+  background-color: $error-50;
+
+  &:hover,
+  &:focus {
+    background-color: darken($error-100, 10%);
+    color: $white;
+  }
+}
+
+.badge-light {
+  color: $gray-900;
+  background-color: $gray-50;
+}
+
+a.badge-light:hover,
+a.badge-light:focus {
+  color: $gray-900;
+  background-color: $gray-100;
+}
+
+.badge-dark {
+  color: $white;
+  background-color: $gray-800;
+}
+
+a.badge-dark:hover,
+a.badge-dark:focus {
+  background-color: $gray-900;
+}
+
+.badge-cyan {
+  color: #fff;
+  background-color: $cyan;
+}
+
+a.badge-cyan:hover,
+a.badge-cyan:focus {
+  background-color: darken($cyan, 10%);
+}
+
+.badge-orange {
+  color: $white;
+  background-color: $warning-500;
+}
+
+a.badge-orange:hover,
+a.badge-orange:focus {
+  background-color: $warning-600;
+}
+
+.badge-purple {
+  color: $white;
+  background-color: $badgePurple;
+}
+
+a.badge-purple:hover,
+a.badge-purple:focus {
+  background-color: darken($badgePurple, 10%);
+}
+
+.badge-brown {
+  color: $white;
+  background-color: $badgeBrown;
+}
+a.badge-brown:hover,
+a.badge-brown:focus {
+  background-color: darken($badgeBrown, 10%);
+}
+
+.badge-light-brown {
+  color: $white;
+  background-color: $badgeLightBrown;
+}
+a.badge-light-brown:hover,
+a.badge-light-brown:focus {
+  background-color: darken($badgeLightBrown, 10%);
+}
+
+.badge-pink {
+  color: $white;
+  background-color: $badgePink;
+}
+a.badge-pink:hover,
+a.badge-pink:focus {
+  background-color: darken($badgePink, 10%);
+}
+
+.badge-inverse {
+  color: #fff;
+  background-color: #4c5667;
+}
+
+a.badge-inverse:hover,
+a.badge-inverse:focus {
+  color: #fff;
+  background-color: #363d4a;
+}
+
+//Badge Gray Version
+.badge-gray-100 {
+  color: $gray-900;
+  background-color: $gray-100;
+}
+
+.badge-gray-200 {
+  color: $gray-900;
+  background-color: $gray-200;
+}
+
+a.badge-gray-100:hover,
+a.badge-gray-100:focus {
+  color: $gray-900;
+  background-color: $gray-200;
+}
+
+.badge-gray-50 {
+  color: $gray-700;
+  background-color: $gray-50;
+}
+
+.badge-gray-300 {
+  background: $gray-300;
+  color: $white;
+
+  &:hover,
+  &:focus {
+    background: darken($color: $gray-300, $amount: 0.6);
+  }
+}
+
+a.badge-gray-50:hover,
+a.badge-gray-50:focus {
+  color: $gray-900;
+  background-color: $gray-100;
+}
+.badge-gray-400 {
+  color: $white;
+  background-color: $gray-400;
+}
+a.badge-gray-400:hover,
+a.badge-gray-400:focus {
+  color: $white;
+  background-color: $gray-500;
+}
+.badge-gray-500 {
+  color: $white;
+  background-color: $gray-500;
+}
+a.badge-gray-500:hover,
+a.badge-gray-500:focus {
+  color: $white;
+  background-color: $gray-600;
+}
+
+.badge-gray-700 {
+  color: $white;
+  background-color: $gray-700;
+}
+a.badge-gray-700:hover,
+a.badge-gray-700:focus {
+  color: $white;
+  background: darken($color: $gray-700, $amount: 0.6);
+}
+
+// Badge Purple Versions
+
+.badge-dark-purple {
+  background-color: darken($badgeSoftPurple, 2%);
+  color: $badgeDarkPurple;
+}
+
+.badge-purple-50 {
+  color: $badgeDarkPurple;
+  background-color: $purple-50;
+}
+a.badge-purple-50 :hover,
+a.badge-purple-50 :focus {
+  background-color: darken($purple-50, 10%);
+}
+
+//Soft Badges
+
+.badge-soft-green {
+  color: $badgeGreen;
+  background-color: $badgeSoftGreen;
+}
+
+a.badge-soft-green:hover,
+a.badge-soft-green:focus {
+  background-color: darken($badgeSoftGreen, 10%);
+}
+
+.badge-soft-info {
+  color: $badgeDarkBlue;
+  background-color: $badgeSoftDarkBlue;
+}
+
+a.badge-soft-info:hover,
+a.badge-soft-info:focus {
+  background-color: darken($badgeSoftDarkBlue, 10%);
+}
+
+.badge-soft-pink {
+  color: $badgePink;
+  background-color: $badgeSoftPink;
+}
+
+.badge-soft-purple {
+  color: $badgePurple;
+  background-color: $badgeSoftPurple;
+}
+a.badge-soft-purple:hover,
+a.badge-soft-purple:focus {
+  background-color: darken($badgeSoftPurple, 10%);
+}
+
+.badge-soft-primary {
+  color: $badgeBlue;
+  background-color: $badgeSoftBlue;
+}
+a.badge-soft-primary:hover,
+a.badge-soft-primary:focus {
+  background-color: darken($badgeSoftBlue, 10%);
+}
+
+.badge-soft-warning {
+  color: $badgeYellow;
+  background-color: $badgeSoftYellow;
+}
+a.badge-soft-warning:hover,
+a.badge-soft-warning:focus {
+  background-color: darken($badgeSoftYellow, 10%);
+}
+
+.badge-soft-brown {
+  color: $badgeBrown;
+  background-color: $badgeSoftbrown;
+}
+a.badge-soft-brown:hover,
+a.badge-soft-brown:focus {
+  background-color: darken($badgeSoftbrown, 10%);
+}
+
+.badge-brand-300 {
+  background-color: var(--color-primary-300);
+}
+
+// Badge Outline
+.badge-outline-gray-50 {
+  color: $gray-900;
+  border: 1px solid $gray-50;
+}
+
+.badge-outline-danger {
+  color: $gray-900;
+  border: 1px solid $error-500;
+}

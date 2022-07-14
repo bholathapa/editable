@@ -1,0 +1,251 @@
+.bg-primary {
+  background-color: $primary !important;
+}
+
+.bg-soft-light-primary {
+  background-color: #f4fcff;
+}
+
+a.bg-primary:hover,
+a.bg-primary:focus,
+button.bg-primary:hover,
+button.bg-primary:focus {
+  background-color: #1179e8 !important;
+}
+
+.bg-secondary {
+  background-color: $gray-500 !important;
+}
+
+a.bg-secondary:hover,
+a.bg-secondary:focus,
+button.bg-secondary:hover,
+button.bg-secondary:focus {
+  background-color: $gray-600 !important;
+}
+
+.bg-success {
+  background-color: $accent-500 !important;
+}
+
+a.bg-success:hover,
+a.bg-success:focus,
+button.bg-success:hover,
+button.bg-success:focus {
+  background-color: $accent-400 !important;
+}
+
+.bg-info {
+  background-color: $badgeDarkBlue !important;
+}
+
+a.bg-info:hover,
+a.bg-info:focus,
+button.bg-info:hover,
+button.bg-info:focus {
+  background-color: lighten($badgeDarkBlue, 10%);
+}
+
+.bg-warning {
+  background-color: $warning-500 !important;
+}
+
+a.bg-warning:hover,
+a.bg-warning:focus,
+button.bg-warning:hover,
+button.bg-warning:focus {
+  background-color: $warning-400 !important;
+}
+
+.bg-danger {
+  background-color: $error-500 !important;
+}
+
+a.bg-danger:hover,
+a.bg-danger:focus,
+button.bg-danger:hover,
+button.bg-danger:focus {
+  background-color: $error-400 !important;
+}
+
+.bg-light {
+  background-color: $gray-100 !important;
+}
+
+a.bg-light:hover,
+a.bg-light:focus,
+button.bg-light:hover,
+button.bg-light:focus {
+  background-color: $gray-100;
+}
+
+.bg-dark {
+  background-color: $gray-800 !important;
+}
+
+a.bg-dark:hover,
+a.bg-dark:focus,
+button.bg-dark:hover,
+button.bg-dark:focus {
+  background-color: $gray-700 !important;
+}
+
+.bg-cyan {
+  background-color: $cyan !important;
+}
+
+a.bg-cyan:hover,
+a.bg-cyan:focus,
+button.bg-cyan:hover,
+button.bg-cyan:focus {
+  background-color: darken($cyan, 10%) !important;
+}
+
+.bg-orange {
+  background-color: $warning-500 !important;
+}
+
+a.bg-orange:hover,
+a.bg-orange:focus,
+button.bg-orange:hover,
+button.bg-orange:focus {
+  background-color: $warning-600 !important;
+}
+
+.bg-purple {
+  background-color: $badgePurple !important;
+}
+
+a.bg-purple:hover,
+a.bg-purple:focus,
+button.bg-purple:hover,
+button.bg-purple:focus {
+  background-color: darken($badgePurple, 10%);
+}
+
+.bg-white {
+  background-color: $white !important;
+}
+
+.bg-transparent {
+  background-color: transparent !important;
+}
+
+//Background For Grays
+.bg-gray-25 {
+  background-color: $gray-25 !important;
+}
+.bg-gray-50 {
+  background-color: $gray-50 !important;
+}
+.bg-gray-100 {
+  background-color: $gray-100 !important;
+}
+.bg-gray-200 {
+  background-color: $gray-200 !important;
+}
+.bg-gray-300 {
+  background-color: $gray-300 !important;
+}
+.bg-gray-400 {
+  background-color: $gray-400 !important;
+}
+.bg-gray-500 {
+  background-color: $gray-500 !important;
+}
+.bg-gray-600 {
+  background-color: $gray-600 !important;
+}
+.bg-gray-700 {
+  background-color: $gray-700 !important;
+}
+
+//Background For Warnings
+
+.bg-warning-50 {
+  background-color: $warning-50 !important;
+}
+.bg-warning-100 {
+  background-color: $warning-100 !important;
+}
+.bg-warning-200 {
+  background-color: $warning-200 !important;
+}
+.bg-warning-300 {
+  background-color: $warning-300 !important;
+}
+.bg-warning-400 {
+  background-color: $warning-400 !important;
+}
+.bg-warning-500 {
+  background-color: $warning-500 !important;
+}
+.bg-warning-600 {
+  background-color: $warning-600 !important;
+}
+.bg-warning-700 {
+  background-color: $warning-700 !important;
+}
+.bg-warning-800 {
+  background-color: $warning-800 !important;
+}
+.bg-warning-900 {
+  background-color: $warning-900 !important;
+}
+
+//Background For BrandColor
+
+.bg-brand-50 {
+  background-color: $brand-50 !important;
+}
+.bg-brand-100 {
+  background-color: $brand-100 !important;
+}
+.bg-brand-200 {
+  background-color: $brand-200 !important;
+}
+.bg-brand-300 {
+  background-color: $brand-300 !important;
+}
+.bg-brand-400 {
+  background-color: $brand-400 !important;
+}
+.bg-brand-500 {
+  background-color: $brand-500 !important;
+}
+.bg-brand-600 {
+  background-color: $brand-600 !important;
+}
+.bg-brand-700 {
+  background-color: $brand-700 !important;
+}
+.bg-brand-800 {
+  background-color: $brand-800 !important;
+}
+.bg-brand-900 {
+  background-color: $brand-900 !important;
+}
+
+//Hover BG
+.hover-bg-success-100 {
+  font-weight: 500;
+  &:hover,
+  &:focus,
+  &:active {
+    background-color: $success-100;
+  }
+}
+
+
+.hover-gray-50 {
+  font-weight: 500;
+  &:hover,
+  &:focus,
+  &:active {
+    background-color: $gray-50;
+  }
+}
+
+.bg-danger-light{
+  background-color: $error-100;
+}

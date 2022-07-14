@@ -1,0 +1,184 @@
+// Custom Colored Select
+.custom-colored-select {
+  width: 200px;
+  border-color: $warning-500;
+}
+
+// Custom Calendar Theme
+
+.custom-calendar-theme {
+  z-index: 0;
+  .fc {
+    // Calendar Header CSS
+    .fc-header-toolbar {
+      background: $white;
+      padding: 15px 14px;
+      border-radius: 3px 3px 0px 0px;
+      margin-bottom: 0 !important;
+      z-index: 0;
+
+      .fc-toolbar-chunk {
+        .fc-button-group {
+          display: inline-flex;
+          background: $gray-50;
+          padding: 5px;
+          border: 1px solid $gray-100;
+          box-sizing: border-box;
+          border-radius: 3px;
+
+          .fc-button {
+            color: $gray-900;
+            font-weight: 500;
+            font-size: 12px;
+            line-height: 20px;
+            padding: 3px 10px;
+            border: none;
+            background: none;
+            text-transform: capitalize;
+
+            &:focus,
+            &:hover {
+              border: none;
+            }
+          }
+
+          .fc-button-active {
+            background: $white;
+            box-shadow: $shadow-2;
+            border-radius: 3px;
+          }
+        }
+
+        .fc-today-button {
+          color: $gray-900;
+          font-weight: 500;
+          font-size: 12px;
+          line-height: 20px;
+          padding: 8px 10px;
+          border: none;
+          background: none;
+          border: 1px solid $gray-100;
+          text-transform: capitalize;
+        }
+
+        > div {
+          display: flex;
+          align-items: center;
+
+          .fc-prev-button,
+          .fc-next-button {
+            color: $gray-900;
+            background-color: $white;
+            border-color: $white;
+            box-shadow: $shadow-1;
+
+            &:hover {
+              background-color: $gray-25;
+              border-color: $gray-25;
+            }
+          }
+
+          .fc-toolbar-title {
+            display: inline-block;
+            color: $gray-900;
+            margin: 0 2rem;
+            font-size: 20px;
+          }
+        }
+      }
+    }
+
+    .fc-view-harness {
+      z-index: 0;
+      height: calc(100vh - 223px);
+    }
+    // Events
+    .fc-event {
+      padding: 3px 7px;
+      text-align: left;
+      font-size: 12px;
+      margin-bottom: 0;
+    }
+
+    .custom-event {
+      .fc-daygrid-event-dot {
+        display: none;
+      }
+    }
+
+    .fc-day-past {
+      background-color: $gray-50;
+    }
+
+    // Day Grid View CSS
+    .fc-daygrid {
+      .fc-scrollgrid-sync-table {
+        tbody {
+          tr {
+            .fc-day-today {
+              background-color: $brand-100 !important;
+            }
+
+            .fc-day-future {
+              background-color: $white;
+            }
+          }
+        }
+      }
+
+      .fc-daygrid-day-frame {
+        min-height: 121.67px;
+      }
+    }
+
+    // Time Grid View
+    .fc-timegrid {
+      .fc-scrollgrid {
+        > tbody {
+          background-color: $white;
+
+          // fc-scrollgrid-section-liquid
+          .fc-scrollgrid-section {
+            table {
+              tbody {
+                tr {
+                  height: 70px;
+                  td {
+                    background: none;
+                    border: 1px solid $gray-100;
+
+                    span {
+                      text-transform: capitalize;
+                    }
+
+                    .fc-timegrid-slot-label-cushion {
+                      color: $gray-300;
+                    }
+
+                    .fc-daygrid-day-events {
+                      margin-bottom: 0;
+
+                      .fc-event {
+                        background-color: transparent !important;
+
+                        .custom-event {
+                          background: rgba(86, 187, 157, 0.2);
+                          color: $accent-600;
+                          padding: 8px;
+                          height: 6rem;
+                          font-weight: 500;
+                          border-left: 3px solid $accent-600;
+                          border-radius: 2px 0px 0px 2px;
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

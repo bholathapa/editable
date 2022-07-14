@@ -1,0 +1,61 @@
+.htColumnHeaders .handsontable {
+  z-index: 1;
+  table.htCore {
+    border-spacing: 1px 2px;
+  }
+
+  th {
+    border: none !important;
+    height: auto !important;
+  }
+
+  tr {
+  
+
+    td {
+      padding: 10px !important;
+      border: none !important;
+      color: $textColor;
+
+      &:first-child {
+        border-top-left-radius: 5px;
+        border-bottom-left-radius: 5px;
+      }
+    }
+  }
+
+  table.htCore td {
+    position: relative;
+    vertical-align: middle;
+    height: auto;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 15px;
+    color: $gray-900;
+    background-color: $white;
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+    &.hasPlaceholder {
+      color: $gray-400;
+    }
+
+    &::before {
+      border: 1px solid $gray-200;
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 5px;
+      right: 5px;
+      border-radius: 3px;
+      height: 30px;
+      transform: translateY(-50%);
+    }
+    &.dateField .htAutocompleteArrow::after {
+      top: auto !important;
+      right: auto !important;
+    }
+    &.requiredError {
+      background-color: $error-100;
+    }
+  }
+}
