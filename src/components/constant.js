@@ -76,3 +76,28 @@ export const data = [
       country: "USA",
     })),
 ];
+export const itemStyle = {
+  fontFamily: "Arial",
+  fontSize: "13px",
+};
+
+export const textStyle = {
+  ...itemStyle,
+  // padding: "2px",
+  width: "160px",
+  padding: "5px 4px",
+  // display: "block",
+  // borderWidth: "1px",
+  // borderStyle: "solid",
+  // borderColor: "rgb(232, 232, 232)",
+};
+
+export const inputStyle = {
+  padding: "5px 4px",
+  width: "169px",
+  height: "25px",
+  //   flex: "1",
+  //   fontFamily: "Arial",
+  fontSize: "13px",
+  //   border: 0,
+};

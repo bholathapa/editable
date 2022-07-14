@@ -902,8 +902,6 @@ body.bdpopup-open {
   vertical-align: middle !important;
 }
 
-
-
 //custom tooltip for chart
 .arrow_box {
   position: relative;
@@ -917,7 +915,7 @@ body.bdpopup-open {
   right: 100%;
   top: 80%;
   border: solid transparent;
-  content: ' ';
+  content: " ";
   height: 0;
   width: 0;
   position: absolute;
@@ -961,36 +959,34 @@ body.bdpopup-open {
   display: block !important;
 }
 
-
-//React Date Time Picker, 
+//React Date Time Picker,
 .rdtPicker {
   z-index: 10 !important;
 }
 
 // Grid List and Active classes
-.c-list__grid{
+.c-list__grid {
   display: grid;
   grid-gap: 10px;
   grid-template-columns: repeat(5, 1fr);
   cursor: pointer;
 
-  .clist__card{
-    &.active{
+  .clist__card {
+    &.active {
       position: relative;
       border: 1px solid $brand-500;
-      background: #EBF1FE;
+      background: #ebf1fe;
       box-shadow: $shadow-5;
-  
-      .checked{
+
+      .checked {
         position: absolute;
         background-color: $brand-500;
         border-radius: 0px 0px 0px 4px;
         right: 0;
         top: 0;
       }
-  
     }
-    .unchecked{
+    .unchecked {
       display: none;
     }
   }
@@ -1010,7 +1006,35 @@ body.bdpopup-open {
   //   width: 440px;
   // }
 }
-.terminal_card{
-   opacity: 1;
-   box-shadow: 0px 3px 0px #367BF6, 0px 5px 15px rgba(20, 28, 52, 0.2); 
+.terminal_card {
+  opacity: 1;
+  box-shadow: 0px 3px 0px #367bf6, 0px 5px 15px rgba(20, 28, 52, 0.2);
+}
+.border-class {
+  border-left: unset;
+  border-right: 1px solid rgb(232, 232, 232);
+  border-top: 1px solid rgb(232, 232, 232);
+  border-bottom: 1px solid rgb(232, 232, 232);
+  // background: rgba(128, 128, 128, 0.1);
+}
+
+.border-header {
+  border-left: unset;
+  border-right: 1px solid rgb(232, 232, 232);
+  border-top: 1px solid rgb(232, 232, 232);
+  border-bottom: 1px solid rgb(232, 232, 232);
+  background: rgba(128, 128, 128, 0.1);
+}
+
+.fixed-cell {
+  font-size: 1em;
+  box-sizing: border-box;
+  // white-space: nowrap;
+  // position: absolute;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  // overflow: hidden;
+  padding: 0 4px;
+  outline: none;
 }

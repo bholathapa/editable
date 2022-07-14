@@ -1,5 +1,6 @@
 import React from "react";
 import { Cell } from "./Cell";
+import { textStyle } from "./constant";
 
 const CustomRow = (props) => {
   const { key1, data, dataIndex, setValues } = props;
@@ -23,23 +24,29 @@ const CustomRow = (props) => {
         top: props.top,
         position: "absolute",
         display: "block",
+        width: "100%",
+        zIndex: 0,
       }}
       key={key1}
     >
-      <th scope="row">{info.id}</th>
-      {Object.keys(info)
-        .splice(1)
-        .map((key, index) => {
-          return (
-            <Cell
-              key={`${index}${dataIndex}`}
-              component="td"
-              valueKey={key}
-              value={info[key]}
-              onChange={handleChange}
-            />
-          );
-        })}
+      <div style={{ display: "flex", padding: 0 }}>
+        <div className="border-class fixed-cell">
+          <span style={textStyle}>{info.id}</span>
+        </div>
+        {Object.keys(info)
+          .splice(1)
+          .map((key, index) => {
+            return (
+              <Cell
+                key={`${index}${dataIndex}`}
+                component="div"
+                valueKey={key}
+                value={info[key]}
+                onChange={handleChange}
+              />
+            );
+          })}
+      </div>
     </div>
   );
 };

@@ -268,8 +268,8 @@ class GeneralList extends Component {
       listEl,
     } = this.props;
     const { renderedRowIndex, scrollState } = this.state;
-    const ListTag = listTagName || "tbody";
-    const WindowTag = listWindowTagName || "table";
+    const ListTag = listTagName || "div";
+    const WindowTag = listWindowTagName || "div";
     const RowComponent = rowComponent;
     return (
       <WindowTag
@@ -279,7 +279,7 @@ class GeneralList extends Component {
           //   overflowY: 'auto',
           //   width: width || '100%'
         }}
-        className="table table-card table-responsive"
+        className="bg-white table-card table-responsive"
         id="dispatchTable"
         onScroll={this.onScroll}
         ref={this.listWindowRef}

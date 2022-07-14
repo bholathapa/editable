@@ -11,66 +11,22 @@ const CustomEditableTable = ({ data }) => {
       <FixedList
         height={520}
         thead={
-          <thead>
-            <tr>
+          <div>
+            <div className="d-flex p-0 bg-white">
               {headers.map((item, idx) => {
                 return (
-                  <th key={idx} scope="col">
-                    {item}
-                  </th>
+                  <div className="border-header fixed-cell py-2" key={idx}>
+                    <span style={{ width: "160px" }}>{item}</span>
+                  </div>
                 );
               })}
-            </tr>
-          </thead>
+            </div>
+          </div>
         }
         rowComponent={CustomRow}
         data={values}
-        rowHeight={52}
+        rowHeight={25}
       />
-      {/* <table className="table">
-        <thead>
-          <tr>
-            {headers.map((item, idx) => {
-              return (
-                <th key={idx} scope="col">
-                  {item}
-                </th>
-              );
-            })}
-          </tr>
-        </thead>
-        <tbody>
-          {values?.map((item, idx) => {
-            const handleChange = (event, valueKey) => {
-              // map() method used to update indicated value with state copy
-              const findValueIndex = values.findIndex((item) => item.id === values[idx].id);
-              if (findValueIndex !== -1) {
-                const temp = JSON.parse(JSON.stringify(values));
-                temp[findValueIndex][valueKey] = event.target.value;
-                setValues([...temp]);
-              }
-            };
-            return (
-              <tr key={idx}>
-                <th scope="row">{item.id}</th>
-                {Object.keys(item)
-                  .splice(1)
-                  .map((key, index) => {
-                    return (
-                      <Cell
-                        key={`${index}${idx}`}
-                        component="td"
-                        valueKey={key}
-                        value={item[key]}
-                        onChange={handleChange}
-                      />
-                    );
-                  })}
-              </tr>
-            );
-          })}
-        </tbody>
-      </table> */}
     </div>
   );
 };
