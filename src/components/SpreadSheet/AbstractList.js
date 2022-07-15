@@ -313,7 +313,7 @@ class GeneralList extends Component {
                 isScrolling={scrollState[index]}
                 top={this.rowPositions[absoluteRowIndex]}
                 height={this.rowHeights[absoluteRowIndex]}
-                // setValues={}
+                headLength={this.props.headLength}
               />
             );
           })}

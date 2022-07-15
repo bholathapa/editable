@@ -17,7 +17,7 @@ const randomName = () => {
   return names[randomValue];
 };
 
-export const headers = ["#", "First", "Last", "Handle", "Email", "Phone", "Address", "City", "State", "Zip", "Country"];
+export const headers = ["First", "Last", "Handle", "Email", "Phone", "Address", "City", "State", "Zip", "Country"];
 
 export const data = [
   {

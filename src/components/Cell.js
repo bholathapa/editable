@@ -1,14 +1,24 @@
 import React from "react";
 import { inputStyle, itemStyle, textStyle } from "./constant";
+import { keyCodes } from "./keycodes";
 
-export const Cell = ({ value, valueKey, onChange, component, componentProps }) => {
-  const [mode, setMode] = React.useState("read");
+export const Cell = ({
+  value,
+  valueKey,
+  onChange,
+  idx,
+  headLength,
+  editIndex,
+  component,
+  componentProps,
+  handleIndexChange,
+}) => {
   const [text, setText] = React.useState(value ?? "");
   const wrapperRef = React.useRef(null);
 
-  const handleClickOutside = (event, textValue) => {
+  const handleClickOutside = (event) => {
     if (wrapperRef.current && !wrapperRef.current.contains(event.target)) {
-      setMode("read");
+      handleIndexChange(null);
     }
   };
 
@@ -21,31 +31,49 @@ export const Cell = ({ value, valueKey, onChange, component, componentProps }) =
     };
   }, [wrapperRef]);
 
-  if (mode === "edit") {
+  const handleKeyPressed = (event) => {
+    if (event.keyCode === keyCodes.TAB || event.keyCode === keyCodes.ENTER) {
+      event.preventDefault();
+      event.stopPropagation();
+      if (headLength !== editIndex + 1) handleIndexChange(editIndex + 1);
+    }
+  };
+
+  if (editIndex === parseInt(idx)) {
     return (
-      <div ref={wrapperRef} style={itemStyle}>
+      <div ref={wrapperRef} className="dataset" dataTag={idx} style={itemStyle}>
         <input
+          ref={(ref) => ref && ref.focus()}
           className=""
           type="text"
           value={text}
+          onFocus={(e) => e.currentTarget.setSelectionRange(e.currentTarget.value.length, e.currentTarget.value.length)}
           style={inputStyle}
           onChange={(e) => {
             setText(e.target.value);
             onChange(e, valueKey);
           }}
+          onKeyDown={(e) => handleKeyPressed(e)}
         />
       </div>
     );
   }
-  if (mode === "read") {
-    const handleEditClick = () => {
-      setMode("edit");
+
+  if (editIndex !== parseInt(idx)) {
+    const handleEditClick = (e) => {
+      const tag = e.currentTarget.dataset.tag;
+      handleIndexChange(parseInt(tag));
     };
 
     const Component = component || "div";
 
     return (
-      <Component className="border-class fixed-cell" onDoubleClick={() => handleEditClick()} {...componentProps}>
+      <Component
+        data-tag={idx}
+        className="border-class fixed-cell dataset"
+        onDoubleClick={(e) => handleEditClick(e)}
+        {...componentProps}
+      >
         <span style={textStyle}>{text}</span>
       </Component>
     );

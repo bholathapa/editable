@@ -13,7 +13,7 @@ const CustomEditableTable = ({ data }) => {
   return (
     <div style={{ overflow: "hidden", height: `calc(100vh - 385px)` }}>
       <FixedList
-        height={520}
+        height={250}
         thead={
           <div className="sticky-head">
             <div className="d-flex p-0 bg-white">
@@ -27,6 +27,7 @@ const CustomEditableTable = ({ data }) => {
             </div>
           </div>
         }
+        headLength={headers.length}
         rowComponent={CustomRow}
         setValues={handleStateChange}
         data={values}

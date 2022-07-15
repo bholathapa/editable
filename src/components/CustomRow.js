@@ -3,8 +3,10 @@ import { Cell } from "./Cell";
 import { textStyle } from "./constant";
 
 const CustomRow = (props) => {
-  const { key1, data, dataIndex, setValues } = props;
+  const { key1, data, dataIndex, setValues, headLength } = props;
+
   const info = data[dataIndex];
+  const [editIndex, setEditIndex] = React.useState(null);
 
   const handleChange = (event, valueKey) => {
     // map() method used to update indicated value with state copy
@@ -14,6 +16,11 @@ const CustomRow = (props) => {
       temp[findValueIndex][valueKey] = event.target.value;
       setValues([...temp]);
     }
+  };
+
+  const handleIndexChange = (index) => {
+    console.log(index);
+    setEditIndex(index);
   };
 
   return (
@@ -29,19 +36,23 @@ const CustomRow = (props) => {
       key={key1}
     >
       <div style={{ display: "flex", padding: 0 }}>
-        <div className="border-class fixed-cell">
+        {/* <div className="border-class fixed-cell">
           <span style={textStyle}>{info.id}</span>
-        </div>
+        </div> */}
         {Object.keys(info)
           .splice(1)
           .map((key, index) => {
             return (
               <Cell
-                key={`${index}${dataIndex}`}
+                key={`${dataIndex}${index}`}
+                idx={`${dataIndex}${index}`}
+                editIndex={editIndex}
                 component="div"
                 valueKey={key}
                 value={info[key]}
                 onChange={handleChange}
+                handleIndexChange={handleIndexChange}
+                headLength={headLength}
               />
             );
           })}
