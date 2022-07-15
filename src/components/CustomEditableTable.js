@@ -6,6 +6,10 @@ import FixedList from "./SpreadSheet/FixedList";
 const CustomEditableTable = ({ data }) => {
   const [values, setValues] = React.useState(data);
 
+  const handleStateChange = (state) => {
+    setValues(state);
+  };
+
   return (
     <div style={{ overflow: "hidden", height: `calc(100vh - 385px)` }}>
       <FixedList
@@ -24,6 +28,7 @@ const CustomEditableTable = ({ data }) => {
           </div>
         }
         rowComponent={CustomRow}
+        setValues={handleStateChange}
         data={values}
         rowHeight={25}
       />

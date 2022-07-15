@@ -47,7 +47,7 @@ export const data = [
     country: "USA",
   },
   {
-    id: "3",
+    id: 3,
     first: "Jane",
     last: "Doe",
     handle: "@mdo",

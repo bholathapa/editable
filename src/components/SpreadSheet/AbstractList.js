@@ -308,10 +308,12 @@ class GeneralList extends Component {
                 dataIndex={startDataIndex}
                 dataEndIndex={endDataIndex}
                 row={absoluteRowIndex}
+                setValues={this.props.setValues}
                 column={endDataIndex - startDataIndex}
                 isScrolling={scrollState[index]}
                 top={this.rowPositions[absoluteRowIndex]}
                 height={this.rowHeights[absoluteRowIndex]}
+                // setValues={}
               />
             );
           })}

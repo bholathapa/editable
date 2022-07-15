@@ -4,7 +4,6 @@ import { textStyle } from "./constant";
 
 const CustomRow = (props) => {
   const { key1, data, dataIndex, setValues } = props;
-  console.log(props);
   const info = data[dataIndex];
 
   const handleChange = (event, valueKey) => {
